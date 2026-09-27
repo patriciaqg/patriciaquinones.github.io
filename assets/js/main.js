@@ -4,6 +4,7 @@
 const i18nData = {
   es: {
     // Navigation
+    nav_role: "Maestra de Primaria & Especialista en Inglés",
     nav_about: "Sobre Mí",
     nav_philosophy: "Metodología",
     nav_experience: "Experiencia",
@@ -23,6 +24,11 @@ const i18nData = {
     hero_btn_contact: "Contactar Conmigo",
     hero_btn_experience: "Ver Trayectoria",
 
+    // Hero Stickers
+    hero_sticker_grad: "Graduada URJC",
+    hero_sticker_mention: "Mención Inglés",
+    hero_sticker_c1: "C1 CAE Certificado",
+
     // Quick Stats
     stat_experience: "+6 Años",
     stat_experience_label: "Experiencia Educativa",
@@ -38,6 +44,9 @@ const i18nData = {
     about_title: "Pasión por enseñar, incluir y transformar",
     about_p1: "Soy maestra de Educación Primaria con mención en Inglés, con amplia experiencia en los ámbitos educativo y social. Mi vocación nace del deseo de conectar con cada alumno y crear entornos de aprendizaje donde la participación, la inclusión y el respeto a la diversidad sean los pilares fundamentales.",
     about_p2: "Me caracterizo por ser creativa, organizada y altamente empática. A lo largo de mi trayectoria he combinado la docencia en academias reconocidas como Kids & Us y English Center con la intervención socioeducativa en Fundación FDI y Cruz Roja Juventud, coordinando proyectos, liderando equipos y adaptando recursos para que nadie se quede atrás.",
+    about_tag1: "Empatía y Escucha",
+    about_tag2: "Diseño Creativo TIC",
+    about_tag3: "Gestión de Equipos",
     
     // Philosophy / Pillars
     phil_badge: "Pilares Pedagógicos",
@@ -107,6 +116,27 @@ const i18nData = {
     job_cruzroja_desc2: "Diseño e impartición de talleres educativos, culturales y de valores para jóvenes de 6 a 20 años.",
     job_cruzroja_desc3: "Promoción de hábitos saludables, competencias para la vida y acompañamiento individualizado.",
 
+    // Experience tags
+    tag_kids_1: "Metodología Kids&Us",
+    tag_kids_2: "Infantil y Primaria",
+    tag_kids_3: "Inmersión Lingüística",
+    tag_coord_1: "Gestión de Proyectos",
+    tag_coord_2: "Presupuestos",
+    tag_coord_3: "Bases de Datos",
+    tag_ec_1: "Infantil & Primaria",
+    tag_ec_2: "Secundaria & Adultos",
+    tag_ec_3: "Role Play & Gamificación",
+    tag_cr_1: "Liderazgo Juvenil",
+    tag_cr_2: "Educación No Formal",
+    tag_cr_3: "Gestión de Grupos",
+    tag_adm_1: "Gestión de Centro",
+    tag_adm_2: "Atención a Familias",
+    tag_fdi_1: "TEA & TDAH",
+    tag_fdi_2: "Diversidad Funcional",
+    tag_fdi_3: "Inclusión Deportiva",
+    tag_part_1: "Clases Personalizadas",
+    tag_part_2: "Kahoot & Quizlet",
+
     // Education & Certifications
     edu_badge: "Estudios & Títulos",
     edu_title: "Educación y Formación Continua",
@@ -118,14 +148,19 @@ const i18nData = {
     edu_c1_title: "Inglés C1 Avanzado (CAE)",
     edu_c1_inst: "Cambridge Assessment English",
     edu_c1_desc: "Competencia lingüística fluida y profesional demostrada en comprensión, expresión oral, lectura y redacción.",
+    edu_level_c1: "Nivel MCER C1",
 
     edu_courses_title: "Formaciones y Certificaciones Especializadas",
+    course_cat_diversity: "Atención a la Diversidad",
     course1_title: "Formación Básica en Autismo",
-    course1_inst: "Fundación Conectea",
+    course1_inst: "Fundación Conectea · Formación Online",
+    course_cat_values: "Valores & Sociedad",
     course2_title: "Perspectiva de Género para Alcanzar la Igualdad",
-    course2_inst: "Ayuntamiento de Alcobendas (Madrid)",
+    course2_inst: "Ayuntamiento de Alcobendas (Madrid) · Formación Online",
+    course_cat_childhood: "Protección a la Infancia",
     course3_title: "Entornos Seguros y Buen Trato en Infancia (LOPIVI)",
-    course3_inst: "Comunidad de Madrid",
+    course3_inst: "Comunidad de Madrid · Formación Online",
+    course_cat_highschool: "Bachillerato",
     edu_bach_title: "Bachillerato en Ciencias Sociales",
     edu_bach_inst: "IES Francisco Giner de los Ríos (06/2015)",
 
@@ -145,6 +180,10 @@ const i18nData = {
     skill_materials: "Adaptación de Materiales",
     skill_lopivi: "Entornos Seguros (LOPIVI)",
     skill_equality: "Perspectiva de Género",
+    skill_tool1: "Kahoot! & Quizlet",
+    skill_tool2: "Canva Educativo",
+    skill_tool3: "Pizarras Digitales Interactivas",
+    skill_tool4: "Gestión Documental & Ofimática",
     skill_empathy: "Empatía y Escucha Activa",
     skill_leadership: "Liderazgo de Grupos",
     skill_planning: "Planificación Pedagógica",
@@ -159,9 +198,11 @@ const i18nData = {
     contact_title: "Ponte en contacto",
     contact_subtitle: "Disponible para oportunidades docentes en academias, colegios bilingües, coordinación de proyectos formativos y colaboraciones socioeducativas.",
     contact_email_title: "Correo Electrónico",
+    contact_send_email: "Enviar Email",
     contact_email_btn: "Copiar Email",
     contact_phone_title: "Teléfono / WhatsApp",
     contact_phone_btn: "Abrir WhatsApp",
+    contact_call_phone: "Llamar por Teléfono",
     contact_linkedin_title: "Perfil Profesional",
     contact_linkedin_btn: "Ver en LinkedIn",
     contact_copied_toast: "¡Copiado al portapapeles con éxito!",
@@ -172,6 +213,7 @@ const i18nData = {
 
   en: {
     // Navigation
+    nav_role: "Primary Teacher & English Specialist",
     nav_about: "About Me",
     nav_philosophy: "Methodology",
     nav_experience: "Experience",
@@ -191,6 +233,11 @@ const i18nData = {
     hero_btn_contact: "Get in Touch",
     hero_btn_experience: "View Career Path",
 
+    // Hero Stickers
+    hero_sticker_grad: "URJC Graduate",
+    hero_sticker_mention: "English Major",
+    hero_sticker_c1: "C1 CAE Certified",
+
     // Quick Stats
     stat_experience: "+6 Years",
     stat_experience_label: "Educational Experience",
@@ -206,6 +253,9 @@ const i18nData = {
     about_title: "Passionate about teaching, inclusion, and inspiring others",
     about_p1: "I am a Primary Education teacher with a major in English, with extensive experience in educational and social fields. My vocation stems from the desire to connect with each student and create learning environments where participation, inclusion, and respect for diversity are core pillars.",
     about_p2: "I am creative, well-organized, and deeply empathetic. Throughout my career, I have combined teaching in renowned language academies such as Kids & Us and English Center with socio-educational intervention at FDI Foundation and Red Cross Youth, coordinating projects, leading teams, and adapting resources so that no student is left behind.",
+    about_tag1: "Empathy & Listening",
+    about_tag2: "Creative EdTech Design",
+    about_tag3: "Team Leadership",
 
     // Philosophy / Pillars
     phil_badge: "Pedagogical Pillars",
@@ -275,6 +325,27 @@ const i18nData = {
     job_cruzroja_desc2: "Design and delivery of educational, cultural, and values workshops for young people aged 6 to 20.",
     job_cruzroja_desc3: "Promoting healthy lifestyle habits, key life skills, and individual personal/academic mentoring.",
 
+    // Experience tags
+    tag_kids_1: "Kids&Us Methodology",
+    tag_kids_2: "Infant & Primary",
+    tag_kids_3: "Language Immersion",
+    tag_coord_1: "Project Management",
+    tag_coord_2: "Budgeting",
+    tag_coord_3: "Databases",
+    tag_ec_1: "Infant & Primary",
+    tag_ec_2: "Secondary & Adults",
+    tag_ec_3: "Role Play & Gamification",
+    tag_cr_1: "Youth Leadership",
+    tag_cr_2: "Non-Formal Education",
+    tag_cr_3: "Group Management",
+    tag_adm_1: "Center Management",
+    tag_adm_2: "Family Support",
+    tag_fdi_1: "ASD & ADHD",
+    tag_fdi_2: "Functional Diversity",
+    tag_fdi_3: "Inclusive Sports",
+    tag_part_1: "Personalized Lessons",
+    tag_part_2: "Kahoot & Quizlet",
+
     // Education & Certifications
     edu_badge: "Studies & Degrees",
     edu_title: "Education & Continuous Learning",
@@ -286,14 +357,19 @@ const i18nData = {
     edu_c1_title: "English C1 Advanced (CAE)",
     edu_c1_inst: "Cambridge Assessment English",
     edu_c1_desc: "Demonstrated professional fluency in oral expression, listening comprehension, advanced reading, and academic writing.",
+    edu_level_c1: "CEFR Level C1",
 
     edu_courses_title: "Specialized Certifications & Courses",
+    course_cat_diversity: "Diversity Support",
     course1_title: "Basic Training in Autism Spectrum Disorder",
-    course1_inst: "Conectea Foundation",
+    course1_inst: "Conectea Foundation · Online Training",
+    course_cat_values: "Values & Society",
     course2_title: "Gender Perspective for Equality",
-    course2_inst: "Alcobendas City Council (Madrid)",
+    course2_inst: "Alcobendas City Council · Online Training",
+    course_cat_childhood: "Child Protection",
     course3_title: "Safe Environments & Child Protection (LOPIVI)",
-    course3_inst: "Community of Madrid",
+    course3_inst: "Community of Madrid · Online Training",
+    course_cat_highschool: "High School",
     edu_bach_title: "High School Diploma in Social Sciences",
     edu_bach_inst: "IES Francisco Giner de los Ríos (06/2015)",
 
@@ -313,6 +389,10 @@ const i18nData = {
     skill_materials: "Material Adaptation",
     skill_lopivi: "Safe Environments (LOPIVI)",
     skill_equality: "Gender Perspective",
+    skill_tool1: "Kahoot! & Quizlet",
+    skill_tool2: "Educational Canva",
+    skill_tool3: "Interactive Digital Whiteboards",
+    skill_tool4: "Document Management & Office Suites",
     skill_empathy: "Empathy & Active Listening",
     skill_leadership: "Group Leadership",
     skill_planning: "Pedagogical Planning",
@@ -327,9 +407,11 @@ const i18nData = {
     contact_title: "Get in touch",
     contact_subtitle: "Available for teaching opportunities at language academies, bilingual schools, educational project management, and socio-educational initiatives.",
     contact_email_title: "Email Address",
+    contact_send_email: "Send Email",
     contact_email_btn: "Copy Email",
     contact_phone_title: "Phone / WhatsApp",
     contact_phone_btn: "Open WhatsApp",
+    contact_call_phone: "Call by Phone",
     contact_linkedin_title: "LinkedIn Profile",
     contact_linkedin_btn: "View on LinkedIn",
     contact_copied_toast: "Copied to clipboard successfully!",
@@ -361,14 +443,14 @@ function setLanguage(lang) {
   if (btnEs && btnEn) {
     if (lang === 'es') {
       btnEs.classList.add('bg-indigo-600', 'text-white', 'shadow-sm');
-      btnEs.classList.remove('text-slate-600', 'hover:bg-slate-100');
+      btnEs.classList.remove('text-slate-600', 'hover:bg-slate-200');
       btnEn.classList.remove('bg-indigo-600', 'text-white', 'shadow-sm');
-      btnEn.classList.add('text-slate-600', 'hover:bg-slate-100');
+      btnEn.classList.add('text-slate-600', 'hover:bg-slate-200');
     } else {
       btnEn.classList.add('bg-indigo-600', 'text-white', 'shadow-sm');
-      btnEn.classList.remove('text-slate-600', 'hover:bg-slate-100');
+      btnEn.classList.remove('text-slate-600', 'hover:bg-slate-200');
       btnEs.classList.remove('bg-indigo-600', 'text-white', 'shadow-sm');
-      btnEs.classList.add('text-slate-600', 'hover:bg-slate-100');
+      btnEs.classList.add('text-slate-600', 'hover:bg-slate-200');
     }
   }
 

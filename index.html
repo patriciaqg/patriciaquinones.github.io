@@ -57,21 +57,21 @@
   <!-- STICKY NAVBAR -->
   <header class="sticky top-0 z-50 glass-nav no-print">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
+      <div class="flex items-center justify-between h-16">
         
         <!-- Logo / Name -->
         <a href="#" class="flex items-center gap-3 group">
-          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-indigo-600 via-rose-500 to-amber-400 p-[2px] shadow-sm transition-transform duration-300 group-hover:scale-105">
-            <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center font-bold text-indigo-600 font-heading text-lg">
+          <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-indigo-600 via-rose-500 to-amber-400 p-[2px] shadow-sm transition-transform duration-300 group-hover:scale-105">
+            <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center font-bold text-indigo-600 font-heading text-base">
               PQ
             </div>
           </div>
           <div>
-            <span class="block font-bold text-slate-900 font-heading text-lg leading-tight group-hover:text-indigo-600 transition-colors">
+            <span class="block font-bold text-slate-900 font-heading text-base leading-tight group-hover:text-indigo-600 transition-colors">
               Patricia Quiñones
             </span>
-            <span class="block text-xs font-medium text-slate-500 tracking-wide">
-              Primary Teacher & English Specialist
+            <span class="block text-xs font-medium text-slate-500 tracking-wide" data-i18n="nav_role">
+              Maestra de Primaria & Especialista en Inglés
             </span>
           </div>
         </a>
@@ -91,10 +91,10 @@
           <!-- Language Toggle -->
           <div class="flex items-center bg-slate-100/90 p-1 rounded-full border border-slate-200 text-xs font-semibold">
             <button id="lang-btn-es" onclick="setLanguage('es')" class="px-2.5 py-1 rounded-full bg-indigo-600 text-white shadow-sm transition-all">
-              🇪🇸 ES
+              ES
             </button>
             <button id="lang-btn-en" onclick="setLanguage('en')" class="px-2.5 py-1 rounded-full text-slate-600 hover:bg-slate-200 transition-all">
-              🇬🇧 EN
+              EN
             </button>
           </div>
 
@@ -135,10 +135,10 @@
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-24">
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12 sm:pt-6 sm:pb-16 space-y-20">
 
     <!-- HERO SECTION -->
-    <section class="relative pt-6 pb-4">
+    <section class="relative pt-1 sm:pt-2 pb-2">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <!-- Hero Text & Pitch (7 cols) -->
@@ -189,8 +189,12 @@
               <i data-lucide="briefcase" class="w-5 h-5 text-slate-500"></i>
               <span data-i18n="hero_btn_experience">Ver Trayectoria</span>
             </a>
-            <a href="https://www.linkedin.com/in/patricia-quinones-garcia" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center p-3.5 rounded-2xl bg-white text-sky-600 border border-slate-200 hover:bg-sky-50 transition-all shadow-sm" title="LinkedIn Profile">
-              <i data-lucide="linkedin" class="w-5 h-5"></i>
+            <a href="https://www.linkedin.com/in/patricia-quinones-garcia" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center p-3.5 rounded-2xl bg-white text-sky-600 border border-slate-200 hover:bg-sky-50 hover:border-sky-300 transition-all shadow-sm" title="LinkedIn Profile" aria-label="LinkedIn">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
             </a>
           </div>
 
@@ -207,15 +211,15 @@
                 <i data-lucide="graduation-cap" class="w-6 h-6"></i>
               </div>
               <div>
-                <p class="text-xs text-slate-500 font-medium">Graduada URJC</p>
-                <p class="text-sm font-bold text-slate-800">Mención Inglés</p>
+                <p class="text-xs text-slate-500 font-medium" data-i18n="hero_sticker_grad">Graduada URJC</p>
+                <p class="text-sm font-bold text-slate-800" data-i18n="hero_sticker_mention">Mención Inglés</p>
               </div>
             </div>
 
             <!-- Floating Cambridge C1 sticker -->
             <div class="absolute -top-4 -right-4 glass-card px-4 py-2.5 rounded-2xl shadow-lg border border-white/80 flex items-center gap-2 no-print">
               <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span class="text-xs font-bold text-slate-800">C1 CAE Certified</span>
+              <span class="text-xs font-bold text-slate-800" data-i18n="hero_sticker_c1">C1 CAE Certificado</span>
             </div>
           </div>
         </div>
@@ -269,19 +273,19 @@
               <div class="w-9 h-9 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 shrink-0">
                 <i data-lucide="heart" class="w-5 h-5"></i>
               </div>
-              <span class="text-sm font-semibold text-slate-800">Empatía y Escucha</span>
+              <span class="text-sm font-semibold text-slate-800" data-i18n="about_tag1">Empatía y Escucha</span>
             </div>
             <div class="flex items-center gap-3 p-3.5 bg-slate-50/80 rounded-2xl border border-slate-200/60">
               <div class="w-9 h-9 rounded-xl bg-rose-100 flex items-center justify-center text-rose-600 shrink-0">
                 <i data-lucide="palette" class="w-5 h-5"></i>
               </div>
-              <span class="text-sm font-semibold text-slate-800">Diseño Creativo TIC</span>
+              <span class="text-sm font-semibold text-slate-800" data-i18n="about_tag2">Diseño Creativo TIC</span>
             </div>
             <div class="flex items-center gap-3 p-3.5 bg-slate-50/80 rounded-2xl border border-slate-200/60">
               <div class="w-9 h-9 rounded-xl bg-teal-100 flex items-center justify-center text-teal-600 shrink-0">
                 <i data-lucide="users" class="w-5 h-5"></i>
               </div>
-              <span class="text-sm font-semibold text-slate-800">Gestión de Equipos</span>
+              <span class="text-sm font-semibold text-slate-800" data-i18n="about_tag3">Gestión de Equipos</span>
             </div>
           </div>
 
@@ -409,9 +413,9 @@
               </li>
             </ul>
             <div class="flex flex-wrap gap-2 pt-2">
-              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Metodología Kids&Us</span>
-              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Infantil y Primaria</span>
-              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Inmersión Lingüística</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg" data-i18n="tag_kids_1">Metodología Kids&Us</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg" data-i18n="tag_kids_2">Infantil y Primaria</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg" data-i18n="tag_kids_3">Inmersión Lingüística</span>
             </div>
           </div>
         </div>
@@ -441,9 +445,9 @@
               </li>
             </ul>
             <div class="flex flex-wrap gap-2 pt-2">
-              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Gestión de Proyectos</span>
-              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Presupuestos</span>
-              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Bases de Datos</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg" data-i18n="tag_coord_1">Gestión de Proyectos</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg" data-i18n="tag_coord_2">Presupuestos</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg" data-i18n="tag_coord_3">Bases de Datos</span>
             </div>
           </div>
         </div>
@@ -473,9 +477,9 @@
               </li>
             </ul>
             <div class="flex flex-wrap gap-2 pt-2">
-              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Infantil & Primaria</span>
-              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Secundaria & Adultos</span>
-              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Role Play & Gamificación</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg" data-i18n="tag_ec_1">Infantil & Primaria</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg" data-i18n="tag_ec_2">Secundaria & Adultos</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg" data-i18n="tag_ec_3">Role Play & Gamificación</span>
             </div>
           </div>
         </div>
@@ -505,9 +509,9 @@
               </li>
             </ul>
             <div class="flex flex-wrap gap-2 pt-2">
-              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Liderazgo Juvenil</span>
-              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Educación No Formal</span>
-              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Gestión de Grupos</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg" data-i18n="tag_cr_1">Liderazgo Juvenil</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg" data-i18n="tag_cr_2">Educación No Formal</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg" data-i18n="tag_cr_3">Gestión de Grupos</span>
             </div>
           </div>
         </div>
@@ -533,8 +537,8 @@
               </li>
             </ul>
             <div class="flex flex-wrap gap-2 pt-2">
-              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Gestión de Centro</span>
-              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Atención a Familias</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg" data-i18n="tag_adm_1">Gestión de Centro</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg" data-i18n="tag_adm_2">Atención a Familias</span>
             </div>
           </div>
         </div>
@@ -564,9 +568,9 @@
               </li>
             </ul>
             <div class="flex flex-wrap gap-2 pt-2">
-              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">TEA & TDAH</span>
-              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Diversidad Funcional</span>
-              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Inclusión Deportiva</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg" data-i18n="tag_fdi_1">TEA & TDAH</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg" data-i18n="tag_fdi_2">Diversidad Funcional</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg" data-i18n="tag_fdi_3">Inclusión Deportiva</span>
             </div>
           </div>
         </div>
@@ -592,8 +596,8 @@
               </li>
             </ul>
             <div class="flex flex-wrap gap-2 pt-2">
-              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Clases Personalizadas</span>
-              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Kahoot & Quizlet</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg" data-i18n="tag_part_1">Clases Personalizadas</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg" data-i18n="tag_part_2">Kahoot & Quizlet</span>
             </div>
           </div>
         </div>
@@ -643,7 +647,7 @@
               <div class="w-12 h-12 rounded-2xl bg-rose-100 flex items-center justify-center text-rose-600 shrink-0">
                 <i data-lucide="languages" class="w-6 h-6"></i>
               </div>
-              <span class="px-3 py-1 bg-rose-50 text-rose-700 text-xs font-bold rounded-full">CEFR Level C1</span>
+              <span class="px-3 py-1 bg-rose-50 text-rose-700 text-xs font-bold rounded-full" data-i18n="edu_level_c1">CEFR Level C1</span>
             </div>
             <div>
               <h3 class="text-xl font-bold text-slate-900 font-heading" data-i18n="edu_c1_title">
@@ -673,28 +677,28 @@
             
             <!-- Course 1 -->
             <div class="pt-4 first:pt-0 space-y-1">
-              <span class="text-xs font-semibold text-teal-600 uppercase tracking-wider">Atención a la Diversidad</span>
+              <span class="text-xs font-semibold text-teal-600 uppercase tracking-wider" data-i18n="course_cat_diversity">Atención a la Diversidad</span>
               <h4 class="text-base font-bold text-slate-800" data-i18n="course1_title">Formación Básica en Autismo</h4>
               <p class="text-sm text-slate-500" data-i18n="course1_inst">Fundación Conectea · Formación Online</p>
             </div>
 
             <!-- Course 2 -->
             <div class="pt-4 space-y-1">
-              <span class="text-xs font-semibold text-rose-600 uppercase tracking-wider">Valores & Sociedad</span>
+              <span class="text-xs font-semibold text-rose-600 uppercase tracking-wider" data-i18n="course_cat_values">Valores & Sociedad</span>
               <h4 class="text-base font-bold text-slate-800" data-i18n="course2_title">Incorporar la Perspectiva de Género para Alcanzar la Igualdad</h4>
               <p class="text-sm text-slate-500" data-i18n="course2_inst">Ayuntamiento de Alcobendas (Madrid) · Formación Online</p>
             </div>
 
             <!-- Course 3 -->
             <div class="pt-4 space-y-1">
-              <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">Protección a la Infancia</span>
+              <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider" data-i18n="course_cat_childhood">Protección a la Infancia</span>
               <h4 class="text-base font-bold text-slate-800" data-i18n="course3_title">Entornos Seguros y Buen Trato para Infancia y Adolescencia (LOPIVI)</h4>
               <p class="text-sm text-slate-500" data-i18n="course3_inst">Comunidad de Madrid · Formación Online</p>
             </div>
 
             <!-- Bachillerato -->
             <div class="pt-4 space-y-1">
-              <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Bachillerato</span>
+              <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider" data-i18n="course_cat_highschool">Bachillerato</span>
               <h4 class="text-base font-bold text-slate-800" data-i18n="edu_bach_title">Bachillerato en Ciencias Sociales</h4>
               <p class="text-sm text-slate-500" data-i18n="edu_bach_inst">IES Francisco Giner de los Ríos (06/2015)</p>
             </div>
@@ -754,10 +758,10 @@
           </div>
           <h3 class="font-bold text-slate-900 font-heading text-lg" data-i18n="skill_group_tools">Herramientas TIC</h3>
           <ul class="space-y-2 text-sm text-slate-600">
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-rose-500"></i><span>Kahoot! & Quizlet</span></li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-rose-500"></i><span>Canva Educativo</span></li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-rose-500"></i><span>Pizarras Digitales Interactivas</span></li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-rose-500"></i><span>Gestión Documental & Ofimática</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-rose-500"></i><span data-i18n="skill_tool1">Kahoot! & Quizlet</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-rose-500"></i><span data-i18n="skill_tool2">Canva Educativo</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-rose-500"></i><span data-i18n="skill_tool3">Pizarras Digitales Interactivas</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-rose-500"></i><span data-i18n="skill_tool4">Gestión Documental & Ofimática</span></li>
           </ul>
         </div>
 
@@ -817,7 +821,7 @@
           </div>
           <div class="flex flex-col gap-2 pt-2">
             <a href="mailto:patricia.pqg@gmail.com" class="w-full py-2.5 px-4 rounded-xl bg-indigo-600 text-white text-xs font-semibold hover:bg-indigo-700 transition-colors shadow-sm">
-              Enviar Email
+              <span data-i18n="contact_send_email">Enviar Email</span>
             </a>
             <button onclick="copyToClipboard('patricia.pqg@gmail.com')" class="w-full py-2 px-4 rounded-xl bg-slate-100 text-slate-700 text-xs font-semibold hover:bg-slate-200 transition-colors">
               <span data-i18n="contact_email_btn">Copiar Email</span>
@@ -840,7 +844,7 @@
               <span data-i18n="contact_phone_btn">Abrir WhatsApp</span>
             </a>
             <a href="tel:+34634933012" class="w-full py-2 px-4 rounded-xl bg-slate-100 text-slate-700 text-xs font-semibold hover:bg-slate-200 transition-colors">
-              Llamar por Teléfono
+              <span data-i18n="contact_call_phone">Llamar por Teléfono</span>
             </a>
           </div>
         </div>
@@ -848,7 +852,11 @@
         <!-- LinkedIn Card -->
         <div class="glass-card p-8 rounded-3xl text-center space-y-4 flex flex-col justify-between">
           <div class="w-14 h-14 rounded-2xl bg-sky-100 flex items-center justify-center text-sky-600 mx-auto">
-            <i data-lucide="linkedin" class="w-7 h-7"></i>
+            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
           </div>
           <div>
             <h3 class="font-bold text-slate-900 font-heading text-lg" data-i18n="contact_linkedin_title">Perfil Profesional</h3>
@@ -871,8 +879,12 @@
   <footer class="border-t border-slate-200/60 bg-white/70 py-10 text-center text-sm text-slate-500 no-print">
     <div class="max-w-6xl mx-auto px-4 space-y-3">
       <div class="flex justify-center items-center gap-4">
-        <a href="https://www.linkedin.com/in/patricia-quinones-garcia" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-sky-600 transition-colors">
-          <i data-lucide="linkedin" class="w-5 h-5"></i>
+        <a href="https://www.linkedin.com/in/patricia-quinones-garcia" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-sky-600 transition-colors" title="LinkedIn Profile" aria-label="LinkedIn">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
         </a>
         <a href="mailto:patricia.pqg@gmail.com" class="text-slate-400 hover:text-rose-500 transition-colors">
           <i data-lucide="mail" class="w-5 h-5"></i>
