@@ -1,1 +1,898 @@
-<p>Hola, este es mi porfolio</p>
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patricia Quiñones García | Maestra de Primaria & Profesora de Inglés</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Porfolio profesional de Patricia Quiñones García: Maestra de Educación Primaria con mención en Inglés (C1 CAE), profesora en Kids&Us y especialista en metodologías activas, educación inclusiva y atención a la diversidad.">
+  <meta name="keywords" content="Patricia Quiñones, Profesora de Inglés, Maestra Primaria, Kids and Us, C1 CAE, Educación Inclusiva, Madrid, Docente, Portfolio">
+  <meta property="og:title" content="Patricia Quiñones García | Porfolio Educativo">
+  <meta property="og:description" content="Maestra de Primaria, Profesora de Inglés (C1 CAE) y Coordinadora Socioeducativa.">
+  <meta property="og:image" content="assets/images/profile.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fff7ed',
+              100: '#ffedd5',
+              500: '#f97316',
+              600: '#ea580c',
+              coral: '#E06D53',
+              indigo: '#4F46E5',
+              teal: '#0D9488',
+              warm: '#FAF9F6'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="relative min-h-screen text-slate-800 antialiased selection:bg-rose-100 selection:text-rose-700">
+
+  <!-- Decorative Background Gradients -->
+  <div class="bg-blob-1"></div>
+  <div class="bg-blob-2"></div>
+  <div class="bg-blob-3"></div>
+
+  <!-- STICKY NAVBAR -->
+  <header class="sticky top-0 z-50 glass-nav no-print">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo / Name -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-indigo-600 via-rose-500 to-amber-400 p-[2px] shadow-sm transition-transform duration-300 group-hover:scale-105">
+            <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center font-bold text-indigo-600 font-heading text-lg">
+              PQ
+            </div>
+          </div>
+          <div>
+            <span class="block font-bold text-slate-900 font-heading text-lg leading-tight group-hover:text-indigo-600 transition-colors">
+              Patricia Quiñones
+            </span>
+            <span class="block text-xs font-medium text-slate-500 tracking-wide">
+              Primary Teacher & English Specialist
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
+          <a href="#sobre-mi" class="hover:text-indigo-600 transition-colors" data-i18n="nav_about">Sobre Mí</a>
+          <a href="#metodologia" class="hover:text-indigo-600 transition-colors" data-i18n="nav_philosophy">Metodología</a>
+          <a href="#experiencia" class="hover:text-indigo-600 transition-colors" data-i18n="nav_experience">Experiencia</a>
+          <a href="#formacion" class="hover:text-indigo-600 transition-colors" data-i18n="nav_education">Formación</a>
+          <a href="#competencias" class="hover:text-indigo-600 transition-colors" data-i18n="nav_skills">Competencias</a>
+          <a href="#contacto" class="hover:text-indigo-600 transition-colors" data-i18n="nav_contact">Contacto</a>
+        </nav>
+
+        <!-- Action Items (Language Switcher + Print CV) -->
+        <div class="hidden md:flex items-center gap-3">
+          <!-- Language Toggle -->
+          <div class="flex items-center bg-slate-100/90 p-1 rounded-full border border-slate-200 text-xs font-semibold">
+            <button id="lang-btn-es" onclick="setLanguage('es')" class="px-2.5 py-1 rounded-full bg-indigo-600 text-white shadow-sm transition-all">
+              🇪🇸 ES
+            </button>
+            <button id="lang-btn-en" onclick="setLanguage('en')" class="px-2.5 py-1 rounded-full text-slate-600 hover:bg-slate-200 transition-all">
+              🇬🇧 EN
+            </button>
+          </div>
+
+          <!-- Print CV Button -->
+          <button onclick="window.print()" class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900 text-white text-xs font-semibold hover:bg-indigo-600 transition-all shadow-sm">
+            <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+            <span data-i18n="nav_download_cv">Imprimir / Guardar CV</span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="flex items-center gap-2 md:hidden">
+          <div class="flex items-center bg-slate-100 p-1 rounded-full border border-slate-200 text-xs font-semibold">
+            <button onclick="setLanguage('es')" class="px-2 py-0.5 rounded-full bg-indigo-600 text-white text-xs">ES</button>
+            <button onclick="setLanguage('en')" class="px-2 py-0.5 rounded-full text-slate-600 text-xs">EN</button>
+          </div>
+          <button onclick="toggleMobileMenu()" class="p-2 rounded-xl text-slate-600 hover:bg-slate-100 focus:outline-none">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="hidden md:hidden pb-6 pt-2 border-t border-slate-200/60 flex flex-col gap-3 text-base font-medium text-slate-700">
+        <a href="#sobre-mi" class="px-3 py-2 rounded-lg hover:bg-slate-100" data-i18n="nav_about">Sobre Mí</a>
+        <a href="#metodologia" class="px-3 py-2 rounded-lg hover:bg-slate-100" data-i18n="nav_philosophy">Metodología</a>
+        <a href="#experiencia" class="px-3 py-2 rounded-lg hover:bg-slate-100" data-i18n="nav_experience">Experiencia</a>
+        <a href="#formacion" class="px-3 py-2 rounded-lg hover:bg-slate-100" data-i18n="nav_education">Formación</a>
+        <a href="#competencias" class="px-3 py-2 rounded-lg hover:bg-slate-100" data-i18n="nav_skills">Competencias</a>
+        <a href="#contacto" class="px-3 py-2 rounded-lg hover:bg-slate-100" data-i18n="nav_contact">Contacto</a>
+        <button onclick="window.print()" class="mt-2 flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-slate-900 text-white text-sm font-semibold">
+          <i data-lucide="printer" class="w-4 h-4"></i>
+          <span data-i18n="nav_download_cv">Imprimir / Guardar CV</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-24">
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-6 pb-4">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Text & Pitch (7 cols) -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left order-2 lg:order-1">
+          
+          <!-- Badges bar -->
+          <div class="flex flex-wrap gap-2 justify-center lg:justify-start">
+            <span class="tag-badge bg-rose-50 text-rose-700 border border-rose-200">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-rose-500"></i>
+              <span data-i18n="hero_badge_kids">Kids & Us Teacher</span>
+            </span>
+            <span class="tag-badge bg-indigo-50 text-indigo-700 border border-indigo-200">
+              <i data-lucide="award" class="w-3.5 h-3.5 text-indigo-500"></i>
+              <span data-i18n="hero_badge_c1">Inglés C1 Avanzado (CAE)</span>
+            </span>
+            <span class="tag-badge bg-teal-50 text-teal-700 border border-teal-200">
+              <i data-lucide="heart-handshake" class="w-3.5 h-3.5 text-teal-600"></i>
+              <span data-i18n="hero_badge_inclusion">Atención a la Diversidad</span>
+            </span>
+          </div>
+
+          <!-- Main Heading -->
+          <div class="space-y-3">
+            <p class="text-lg font-semibold text-rose-600 tracking-wide" data-i18n="hero_greeting">¡Hola! Soy</p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight font-heading leading-[1.15]">
+              Patricia <br class="hidden sm:inline" />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-rose-500 to-amber-500">
+                Quiñones García
+              </span>
+            </h1>
+            <p class="text-xl sm:text-2xl font-semibold text-slate-700 font-heading" data-i18n="hero_role">
+              Maestra de Educación Primaria & Profesora de Inglés
+            </p>
+          </div>
+
+          <!-- Subtext / Summary -->
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0" data-i18n="hero_subtext">
+            Especialista en metodologías activas, aprendizaje inmersivo Kids&Us y educación inclusiva. Comprometida con crear espacios de aprendizaje motivadores, empáticos y adaptados a cada estudiante.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap gap-4 justify-center lg:justify-start pt-2 no-print">
+            <a href="#contacto" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-indigo-600 text-white font-semibold shadow-lg shadow-indigo-200 hover:bg-indigo-700 hover:shadow-xl transition-all transform hover:-translate-y-0.5">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+              <span data-i18n="hero_btn_contact">Contactar Conmigo</span>
+            </a>
+            <a href="#experiencia" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-white text-slate-800 font-semibold border border-slate-200 hover:bg-slate-50 hover:border-slate-300 shadow-sm transition-all">
+              <i data-lucide="briefcase" class="w-5 h-5 text-slate-500"></i>
+              <span data-i18n="hero_btn_experience">Ver Trayectoria</span>
+            </a>
+            <a href="https://www.linkedin.com/in/patricia-quinones-garcia" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center p-3.5 rounded-2xl bg-white text-sky-600 border border-slate-200 hover:bg-sky-50 transition-all shadow-sm" title="LinkedIn Profile">
+              <i data-lucide="linkedin" class="w-5 h-5"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Hero Photo (5 cols) -->
+        <div class="lg:col-span-5 flex justify-center order-1 lg:order-2">
+          <div class="relative w-64 h-64 sm:w-80 sm:h-80 profile-image-container">
+            <img src="assets/images/profile.jpg" alt="Patricia Quiñones García" class="w-full h-full object-cover rounded-[32px] shadow-2xl border-4 border-white bg-slate-100" />
+            
+            <!-- Floating experience sticker -->
+            <div class="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 glass-card px-4 py-3 rounded-2xl shadow-xl border border-white/80 flex items-center gap-3 animate-float-slow no-print">
+              <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-amber-600">
+                <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="text-xs text-slate-500 font-medium">Graduada URJC</p>
+                <p class="text-sm font-bold text-slate-800">Mención Inglés</p>
+              </div>
+            </div>
+
+            <!-- Floating Cambridge C1 sticker -->
+            <div class="absolute -top-4 -right-4 glass-card px-4 py-2.5 rounded-2xl shadow-lg border border-white/80 flex items-center gap-2 no-print">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span class="text-xs font-bold text-slate-800">C1 CAE Certified</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Key Stats Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-16 pt-8 border-t border-slate-200/60">
+        <div class="glass-card p-5 rounded-2xl text-center">
+          <p class="text-3xl sm:text-4xl font-extrabold text-indigo-600 font-heading" data-i18n="stat_experience">+6 Años</p>
+          <p class="text-xs sm:text-sm font-medium text-slate-500 mt-1" data-i18n="stat_experience_label">Experiencia Educativa</p>
+        </div>
+        <div class="glass-card p-5 rounded-2xl text-center">
+          <p class="text-3xl sm:text-4xl font-extrabold text-rose-500 font-heading" data-i18n="stat_level">C1 CAE</p>
+          <p class="text-xs sm:text-sm font-medium text-slate-500 mt-1" data-i18n="stat_level_label">Nivel de Inglés Avanzado</p>
+        </div>
+        <div class="glass-card p-5 rounded-2xl text-center">
+          <p class="text-3xl sm:text-4xl font-extrabold text-teal-600 font-heading" data-i18n="stat_specialty">Inclusión</p>
+          <p class="text-xs sm:text-sm font-medium text-slate-500 mt-1" data-i18n="stat_specialty_label">TEA, TDAH y Diversidad</p>
+        </div>
+        <div class="glass-card p-5 rounded-2xl text-center">
+          <p class="text-3xl sm:text-4xl font-extrabold text-amber-500 font-heading" data-i18n="stat_volunteering">+7 Años</p>
+          <p class="text-xs sm:text-sm font-medium text-slate-500 mt-1" data-i18n="stat_volunteering_label">Liderazgo en Cruz Roja</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ / ABOUT ME -->
+    <section id="sobre-mi" class="scroll-mt-28">
+      <div class="glass-card p-8 sm:p-12 rounded-3xl relative overflow-hidden">
+        <div class="max-w-3xl space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-100/70 text-rose-700 text-xs font-bold tracking-wider uppercase">
+            <i data-lucide="user" class="w-3.5 h-3.5"></i>
+            <span data-i18n="about_badge">Conóceme</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 font-heading" data-i18n="about_title">
+            Pasión por enseñar, incluir y transformar
+          </h2>
+          <div class="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+            <p data-i18n="about_p1">
+              Soy maestra de Educación Primaria con mención en Inglés, con amplia experiencia en los ámbitos educativo y social. Mi vocación nace del deseo de conectar con cada alumno y crear entornos de aprendizaje donde la participación, la inclusión y el respeto a la diversidad sean los pilares fundamentales.
+            </p>
+            <p data-i18n="about_p2">
+              Me caracterizo por ser creativa, organizada y altamente empática. A lo largo de mi trayectoria he combinado la docencia en academias reconocidas como Kids & Us y English Center con la intervención socioeducativa en Fundación FDI y Cruz Roja Juventud, coordinando proyectos, liderando equipos y adaptando recursos para que nadie se quede atrás.
+            </p>
+          </div>
+
+          <!-- Highlight qualities -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+            <div class="flex items-center gap-3 p-3.5 bg-slate-50/80 rounded-2xl border border-slate-200/60">
+              <div class="w-9 h-9 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 shrink-0">
+                <i data-lucide="heart" class="w-5 h-5"></i>
+              </div>
+              <span class="text-sm font-semibold text-slate-800">Empatía y Escucha</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 bg-slate-50/80 rounded-2xl border border-slate-200/60">
+              <div class="w-9 h-9 rounded-xl bg-rose-100 flex items-center justify-center text-rose-600 shrink-0">
+                <i data-lucide="palette" class="w-5 h-5"></i>
+              </div>
+              <span class="text-sm font-semibold text-slate-800">Diseño Creativo TIC</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 bg-slate-50/80 rounded-2xl border border-slate-200/60">
+              <div class="w-9 h-9 rounded-xl bg-teal-100 flex items-center justify-center text-teal-600 shrink-0">
+                <i data-lucide="users" class="w-5 h-5"></i>
+              </div>
+              <span class="text-sm font-semibold text-slate-800">Gestión de Equipos</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- METODOLOGÍA / PEDAGOGICAL PILLARS -->
+    <section id="metodologia" class="scroll-mt-28 space-y-10">
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100/70 text-indigo-700 text-xs font-bold tracking-wider uppercase">
+          <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+          <span data-i18n="phil_badge">Pilares Pedagógicos</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 font-heading" data-i18n="phil_title">
+          ¿Cómo enfoco mis clases y proyectos?
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        
+        <!-- Pillar 1: Immersive -->
+        <div class="glass-card p-8 rounded-3xl space-y-4 border-t-4 border-t-rose-500">
+          <div class="w-12 h-12 rounded-2xl bg-rose-100 flex items-center justify-center text-rose-600">
+            <i data-lucide="message-circle" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 font-heading" data-i18n="phil_card1_title">Metodología Inmersiva</h3>
+          <p class="text-slate-600 leading-relaxed text-sm sm:text-base" data-i18n="phil_card1_desc">
+            Aprendizaje natural de la lengua inglesa mediante cuentos, canciones, rutinas estructuradas y contextos cotidianos significativos (metodología Kids & Us).
+          </p>
+        </div>
+
+        <!-- Pillar 2: Gamification & Tech -->
+        <div class="glass-card p-8 rounded-3xl space-y-4 border-t-4 border-t-indigo-500">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-100 flex items-center justify-center text-indigo-600">
+            <i data-lucide="gamepad-2" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 font-heading" data-i18n="phil_card2_title">Gamificación & TIC Activas</h3>
+          <p class="text-slate-600 leading-relaxed text-sm sm:text-base" data-i18n="phil_card2_desc">
+            Dinamización del aula a través de dinámicas lúdicas, role-play y plataformas digitales interactivas como Kahoot y Quizlet para potenciar la motivación.
+          </p>
+        </div>
+
+        <!-- Pillar 3: Diversity & Special Needs -->
+        <div class="glass-card p-8 rounded-3xl space-y-4 border-t-4 border-t-teal-500">
+          <div class="w-12 h-12 rounded-2xl bg-teal-100 flex items-center justify-center text-teal-600">
+            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 font-heading" data-i18n="phil_card3_title">Educación Inclusiva & NEE</h3>
+          <p class="text-slate-600 leading-relaxed text-sm sm:text-base" data-i18n="phil_card3_desc">
+            Diseño y adaptación de materiales accesibles para necesidades educativas especiales: TEA, TDAH, diversidad motora y sensorial.
+          </p>
+        </div>
+
+        <!-- Pillar 4: Safe Environments & LOPIVI -->
+        <div class="glass-card p-8 rounded-3xl space-y-4 border-t-4 border-t-amber-500">
+          <div class="w-12 h-12 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-600">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 font-heading" data-i18n="phil_card4_title">Entornos Seguros & LOPIVI</h3>
+          <p class="text-slate-600 leading-relaxed text-sm sm:text-base" data-i18n="phil_card4_desc">
+            Creación de espacios de buen trato, escucha activa y bienestar emocional para la infancia y juventud, con enfoque de género y desarrollo integral.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA / EXPERIENCE -->
+    <section id="experiencia" class="scroll-mt-28 space-y-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div class="space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-100/70 text-teal-700 text-xs font-bold tracking-wider uppercase">
+            <i data-lucide="briefcase" class="w-3.5 h-3.5"></i>
+            <span data-i18n="exp_badge">Trayectoria</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 font-heading" data-i18n="exp_title">
+            Experiencia Profesional y Voluntariado
+          </h2>
+        </div>
+
+        <!-- Interactive Category Filters -->
+        <div class="flex flex-wrap gap-2 no-print">
+          <button onclick="filterExperience('all', this)" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-indigo-600 text-white shadow-md transition-all">
+            <span data-i18n="filter_all">Todos</span>
+          </button>
+          <button onclick="filterExperience('teaching', this)" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition-all">
+            <span data-i18n="filter_teaching">Docencia & Idiomas</span>
+          </button>
+          <button onclick="filterExperience('social', this)" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition-all">
+            <span data-i18n="filter_social">Inclusión & Social</span>
+          </button>
+          <button onclick="filterExperience('mgmt', this)" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition-all">
+            <span data-i18n="filter_mgmt">Coordinación & Gestión</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Experience Cards Feed -->
+      <div class="space-y-6" id="experience-feed">
+
+        <!-- 1. Kids & Us -->
+        <div class="timeline-item glass-card p-6 sm:p-8 rounded-3xl flex flex-col md:flex-row gap-6 transition-all border-l-4 border-l-rose-500" data-category="teaching">
+          <div class="md:w-64 shrink-0 space-y-2">
+            <span class="inline-block px-3 py-1 bg-rose-50 text-rose-700 text-xs font-bold rounded-full border border-rose-200" data-i18n="job_kids_period">
+              11/2025 – Actualidad
+            </span>
+            <h4 class="text-xl font-bold text-slate-900 font-heading" data-i18n="job_kids_company">Kids & Us</h4>
+            <p class="text-sm font-semibold text-rose-600" data-i18n="job_kids_title">Profesora de Inglés</p>
+          </div>
+          <div class="space-y-3 text-slate-600 text-sm sm:text-base flex-1">
+            <ul class="space-y-2 list-none">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-rose-500 shrink-0 mt-1"></i>
+                <span data-i18n="job_kids_desc1">Sesiones de inglés inmersivas para alumnado de infantil y primaria siguiendo la metodología de Kids & Us.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-rose-500 shrink-0 mt-1"></i>
+                <span data-i18n="job_kids_desc2">Preparación de actividades adaptadas a cada nivel que refuercen el desarrollo lingüístico mediante cuentos y rutinas de aprendizaje.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-rose-500 shrink-0 mt-1"></i>
+                <span data-i18n="job_kids_desc3">Mantener un ambiente de aula dinámico y motivador, con juegos y contenido interactivo, elaborando informes para las familias.</span>
+              </li>
+            </ul>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Metodología Kids&Us</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Infantil y Primaria</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Inmersión Lingüística</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Proactiva Formación -->
+        <div class="timeline-item glass-card p-6 sm:p-8 rounded-3xl flex flex-col md:flex-row gap-6 transition-all border-l-4 border-l-amber-500" data-category="mgmt">
+          <div class="md:w-64 shrink-0 space-y-2">
+            <span class="inline-block px-3 py-1 bg-amber-50 text-amber-700 text-xs font-bold rounded-full border border-amber-200" data-i18n="job_coord_period">
+              12/2023 – 04/2026
+            </span>
+            <h4 class="text-xl font-bold text-slate-900 font-heading" data-i18n="job_coord_company">Proactiva Formación</h4>
+            <p class="text-sm font-semibold text-amber-600" data-i18n="job_coord_title">Coordinadora de Formación</p>
+          </div>
+          <div class="space-y-3 text-slate-600 text-sm sm:text-base flex-1">
+            <ul class="space-y-2 list-none">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-500 shrink-0 mt-1"></i>
+                <span data-i18n="job_coord_desc1">Apoyo en la gestión y coordinación de proyectos y presupuestos formativos.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-500 shrink-0 mt-1"></i>
+                <span data-i18n="job_coord_desc2">Organización y gestión de bases de datos, documentación y recursos clave de los programas.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-500 shrink-0 mt-1"></i>
+                <span data-i18n="job_coord_desc3">Gestión de procesos de inscripción, seguimiento de actividades y asignación de recursos.</span>
+              </li>
+            </ul>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Gestión de Proyectos</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Presupuestos</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Bases de Datos</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Profesora English Center -->
+        <div class="timeline-item glass-card p-6 sm:p-8 rounded-3xl flex flex-col md:flex-row gap-6 transition-all border-l-4 border-l-indigo-500" data-category="teaching">
+          <div class="md:w-64 shrink-0 space-y-2">
+            <span class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full border border-indigo-200" data-i18n="job_ec_prof_period">
+              04/2024 – 06/2024
+            </span>
+            <h4 class="text-xl font-bold text-slate-900 font-heading" data-i18n="job_ec_prof_company">English Center</h4>
+            <p class="text-sm font-semibold text-indigo-600" data-i18n="job_ec_prof_title">Profesora de Inglés</p>
+          </div>
+          <div class="space-y-3 text-slate-600 text-sm sm:text-base flex-1">
+            <ul class="space-y-2 list-none">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500 shrink-0 mt-1"></i>
+                <span data-i18n="job_ec_prof_desc1">Impartición de clases de inglés en diferentes etapas educativas: infantil, primaria, secundaria y adultos.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500 shrink-0 mt-1"></i>
+                <span data-i18n="job_ec_prof_desc2">Diseño de materiales didácticos y actividades adaptadas a cada nivel con metodologías activas (role play, audiovisuales, TIC).</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500 shrink-0 mt-1"></i>
+                <span data-i18n="job_ec_prof_desc3">Evaluación continua y seguimiento personalizado del progreso de cada estudiante.</span>
+              </li>
+            </ul>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Infantil & Primaria</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Secundaria & Adultos</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Role Play & Gamificación</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Cruz Roja Juventud (Voluntariado) -->
+        <div class="timeline-item glass-card p-6 sm:p-8 rounded-3xl flex flex-col md:flex-row gap-6 transition-all border-l-4 border-l-rose-600" data-category="social mgmt">
+          <div class="md:w-64 shrink-0 space-y-2">
+            <span class="inline-block px-3 py-1 bg-rose-50 text-rose-800 text-xs font-bold rounded-full border border-rose-300" data-i18n="job_cruzroja_period">
+              2017 – Actualidad
+            </span>
+            <h4 class="text-xl font-bold text-slate-900 font-heading" data-i18n="job_cruzroja_company">Cruz Roja Española</h4>
+            <p class="text-sm font-semibold text-rose-600" data-i18n="job_cruzroja_title">Voluntaria & Equipo Directivo</p>
+          </div>
+          <div class="space-y-3 text-slate-600 text-sm sm:text-base flex-1">
+            <ul class="space-y-2 list-none">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-rose-600 shrink-0 mt-1"></i>
+                <span data-i18n="job_cruzroja_desc1">Participación activa en el equipo directivo de Cruz Roja Juventud en la Comunidad de Madrid.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-rose-600 shrink-0 mt-1"></i>
+                <span data-i18n="job_cruzroja_desc2">Diseño e implementación de talleres educativos, culturales y de desarrollo personal para edades de 6 a 20 años.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-rose-600 shrink-0 mt-1"></i>
+                <span data-i18n="job_cruzroja_desc3">Promoción de valores, hábitos saludables, habilidades para la vida y acompañamiento individualizado.</span>
+              </li>
+            </ul>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Liderazgo Juvenil</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Educación No Formal</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Gestión de Grupos</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Auxiliar Administrativa English Center -->
+        <div class="timeline-item glass-card p-6 sm:p-8 rounded-3xl flex flex-col md:flex-row gap-6 transition-all border-l-4 border-l-slate-400" data-category="mgmt">
+          <div class="md:w-64 shrink-0 space-y-2">
+            <span class="inline-block px-3 py-1 bg-slate-100 text-slate-700 text-xs font-bold rounded-full border border-slate-200" data-i18n="job_ec_admin_period">
+              10/2019 – 10/2023
+            </span>
+            <h4 class="text-xl font-bold text-slate-900 font-heading" data-i18n="job_ec_admin_company">English Center</h4>
+            <p class="text-sm font-semibold text-slate-700" data-i18n="job_ec_admin_title">Auxiliar Administrativa</p>
+          </div>
+          <div class="space-y-3 text-slate-600 text-sm sm:text-base flex-1">
+            <ul class="space-y-2 list-none">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-slate-500 shrink-0 mt-1"></i>
+                <span data-i18n="job_ec_admin_desc1">Organización integral de bases de datos, matriculaciones y documentación del centro.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-slate-500 shrink-0 mt-1"></i>
+                <span data-i18n="job_ec_admin_desc2">Apoyo en la gestión diaria de clases, atención al alumnado y comunicación con las familias.</span>
+              </li>
+            </ul>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Gestión de Centro</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Atención a Familias</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Fundación FDI (Monitora NEE) -->
+        <div class="timeline-item glass-card p-6 sm:p-8 rounded-3xl flex flex-col md:flex-row gap-6 transition-all border-l-4 border-l-teal-500" data-category="social">
+          <div class="md:w-64 shrink-0 space-y-2">
+            <span class="inline-block px-3 py-1 bg-teal-50 text-teal-700 text-xs font-bold rounded-full border border-teal-200" data-i18n="job_fdi_period">
+              07/2019 – 09/2021
+            </span>
+            <h4 class="text-xl font-bold text-slate-900 font-heading" data-i18n="job_fdi_company">Fundación FDI</h4>
+            <p class="text-sm font-semibold text-teal-600" data-i18n="job_fdi_title">Monitora de Necesidades Especiales</p>
+          </div>
+          <div class="space-y-3 text-slate-600 text-sm sm:text-base flex-1">
+            <ul class="space-y-2 list-none">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-500 shrink-0 mt-1"></i>
+                <span data-i18n="job_fdi_desc1">Apoyo a niños y niñas con diferentes necesidades educativas especiales (NEE) en campamentos deportivos y de ocio.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-500 shrink-0 mt-1"></i>
+                <span data-i18n="job_fdi_desc2">Intervención directa en Trastorno del Espectro Autista (TEA), TDAH, Espina Bífida y Ceguera.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-500 shrink-0 mt-1"></i>
+                <span data-i18n="job_fdi_desc3">Creación de recursos adaptados y acompañamiento pedagógico y emocional en actividades deportivas.</span>
+              </li>
+            </ul>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">TEA & TDAH</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Diversidad Funcional</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Inclusión Deportiva</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Profesora Particular -->
+        <div class="timeline-item glass-card p-6 sm:p-8 rounded-3xl flex flex-col md:flex-row gap-6 transition-all border-l-4 border-l-indigo-400" data-category="teaching">
+          <div class="md:w-64 shrink-0 space-y-2">
+            <span class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full border border-indigo-200" data-i18n="job_particular_period">
+              10/2018 – 06/2019
+            </span>
+            <h4 class="text-xl font-bold text-slate-900 font-heading" data-i18n="job_particular_company">Docencia Privada</h4>
+            <p class="text-sm font-semibold text-indigo-600" data-i18n="job_particular_title">Profesora Particular de Inglés</p>
+          </div>
+          <div class="space-y-3 text-slate-600 text-sm sm:text-base flex-1">
+            <ul class="space-y-2 list-none">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500 shrink-0 mt-1"></i>
+                <span data-i18n="job_particular_desc1">Clases particulares de inglés a alumnas de Bachillerato y 3º de Primaria para potenciar habilidades lingüísticas.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500 shrink-0 mt-1"></i>
+                <span data-i18n="job_particular_desc2">Dinámicas interactivas con herramientas como Kahoot y Quizlet para gramática, vocabulario y comprensión oral.</span>
+              </li>
+            </ul>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Clases Personalizadas</span>
+              <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-700 font-medium rounded-lg">Kahoot & Quizlet</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FORMACIÓN / EDUCATION & COURSES -->
+    <section id="formacion" class="scroll-mt-28 space-y-10">
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100/70 text-amber-800 text-xs font-bold tracking-wider uppercase">
+          <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i>
+          <span data-i18n="edu_badge">Estudios & Títulos</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 font-heading" data-i18n="edu_title">
+          Educación y Formación Continua
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- University Degree & Main Certification -->
+        <div class="space-y-6">
+          
+          <!-- Primary Education Degree -->
+          <div class="glass-card p-8 rounded-3xl space-y-4 border border-indigo-100 relative">
+            <div class="flex items-start justify-between gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-indigo-100 flex items-center justify-center text-indigo-600 shrink-0">
+                <i data-lucide="award" class="w-6 h-6"></i>
+              </div>
+              <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full" data-i18n="edu_grado_year">11/2022</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 font-heading" data-i18n="edu_grado_title">
+                Grado en Educación Primaria (Mención en Inglés)
+              </h3>
+              <p class="text-indigo-600 font-semibold text-sm mt-1" data-i18n="edu_grado_inst">Universidad Rey Juan Carlos</p>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed" data-i18n="edu_grado_desc">
+              Especialización completa en didáctica de la lengua extranjera (inglés), desarrollo curricular y metodologías docentes.
+            </p>
+          </div>
+
+          <!-- Cambridge C1 -->
+          <div class="glass-card p-8 rounded-3xl space-y-4 border border-rose-100 relative">
+            <div class="flex items-start justify-between gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-rose-100 flex items-center justify-center text-rose-600 shrink-0">
+                <i data-lucide="languages" class="w-6 h-6"></i>
+              </div>
+              <span class="px-3 py-1 bg-rose-50 text-rose-700 text-xs font-bold rounded-full">CEFR Level C1</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 font-heading" data-i18n="edu_c1_title">
+                Inglés – Nivel Avanzado C1 (CAE)
+              </h3>
+              <p class="text-rose-600 font-semibold text-sm mt-1" data-i18n="edu_c1_inst">Cambridge Assessment English</p>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed" data-i18n="edu_c1_desc">
+              Competencia lingüística fluida y profesional demostrada en comprensión, expresión oral, lectura y redacción.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Specialized Courses & Certifications -->
+        <div class="glass-card p-8 rounded-3xl space-y-6">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-amber-600">
+              <i data-lucide="file-check" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 font-heading" data-i18n="edu_courses_title">
+              Formaciones y Certificaciones
+            </h3>
+          </div>
+
+          <div class="space-y-5 divide-y divide-slate-100">
+            
+            <!-- Course 1 -->
+            <div class="pt-4 first:pt-0 space-y-1">
+              <span class="text-xs font-semibold text-teal-600 uppercase tracking-wider">Atención a la Diversidad</span>
+              <h4 class="text-base font-bold text-slate-800" data-i18n="course1_title">Formación Básica en Autismo</h4>
+              <p class="text-sm text-slate-500" data-i18n="course1_inst">Fundación Conectea · Formación Online</p>
+            </div>
+
+            <!-- Course 2 -->
+            <div class="pt-4 space-y-1">
+              <span class="text-xs font-semibold text-rose-600 uppercase tracking-wider">Valores & Sociedad</span>
+              <h4 class="text-base font-bold text-slate-800" data-i18n="course2_title">Incorporar la Perspectiva de Género para Alcanzar la Igualdad</h4>
+              <p class="text-sm text-slate-500" data-i18n="course2_inst">Ayuntamiento de Alcobendas (Madrid) · Formación Online</p>
+            </div>
+
+            <!-- Course 3 -->
+            <div class="pt-4 space-y-1">
+              <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">Protección a la Infancia</span>
+              <h4 class="text-base font-bold text-slate-800" data-i18n="course3_title">Entornos Seguros y Buen Trato para Infancia y Adolescencia (LOPIVI)</h4>
+              <p class="text-sm text-slate-500" data-i18n="course3_inst">Comunidad de Madrid · Formación Online</p>
+            </div>
+
+            <!-- Bachillerato -->
+            <div class="pt-4 space-y-1">
+              <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Bachillerato</span>
+              <h4 class="text-base font-bold text-slate-800" data-i18n="edu_bach_title">Bachillerato en Ciencias Sociales</h4>
+              <p class="text-sm text-slate-500" data-i18n="edu_bach_inst">IES Francisco Giner de los Ríos (06/2015)</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- COMPETENCIAS / SKILLS -->
+    <section id="competencias" class="scroll-mt-28 space-y-10">
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-100/70 text-rose-700 text-xs font-bold tracking-wider uppercase">
+          <i data-lucide="check-square" class="w-3.5 h-3.5"></i>
+          <span data-i18n="skills_badge">Habilidades</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 font-heading" data-i18n="skills_title">
+          Competencias Clave
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Skill Block 1: Methodology -->
+        <div class="glass-card p-6 rounded-3xl space-y-4">
+          <div class="w-10 h-10 rounded-2xl bg-indigo-100 flex items-center justify-center text-indigo-600">
+            <i data-lucide="book-marked" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 font-heading text-lg" data-i18n="skill_group_teaching">Metodología y Didáctica</h3>
+          <ul class="space-y-2 text-sm text-slate-600">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i><span data-i18n="skill_active_method">Metodologías Activas</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i><span data-i18n="skill_kids_method">Metodología Kids&Us</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i><span data-i18n="skill_gamification">Gamificación Educativa</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i><span data-i18n="skill_storytelling">Storytelling & Cuentos</span></li>
+          </ul>
+        </div>
+
+        <!-- Skill Block 2: Inclusion -->
+        <div class="glass-card p-6 rounded-3xl space-y-4">
+          <div class="w-10 h-10 rounded-2xl bg-teal-100 flex items-center justify-center text-teal-600">
+            <i data-lucide="heart" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 font-heading text-lg" data-i18n="skill_group_social">Inclusión y Valores</h3>
+          <ul class="space-y-2 text-sm text-slate-600">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-500"></i><span data-i18n="skill_tea_tdah">Atención a TEA y TDAH</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-500"></i><span data-i18n="skill_materials">Adaptación de Materiales</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-500"></i><span data-i18n="skill_lopivi">Entornos Seguros (LOPIVI)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-500"></i><span data-i18n="skill_equality">Perspectiva de Género</span></li>
+          </ul>
+        </div>
+
+        <!-- Skill Block 3: EdTech & Tools -->
+        <div class="glass-card p-6 rounded-3xl space-y-4">
+          <div class="w-10 h-10 rounded-2xl bg-rose-100 flex items-center justify-center text-rose-600">
+            <i data-lucide="laptop" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 font-heading text-lg" data-i18n="skill_group_tools">Herramientas TIC</h3>
+          <ul class="space-y-2 text-sm text-slate-600">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-rose-500"></i><span>Kahoot! & Quizlet</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-rose-500"></i><span>Canva Educativo</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-rose-500"></i><span>Pizarras Digitales Interactivas</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-rose-500"></i><span>Gestión Documental & Ofimática</span></li>
+          </ul>
+        </div>
+
+        <!-- Skill Block 4: Soft Skills -->
+        <div class="glass-card p-6 rounded-3xl space-y-4">
+          <div class="w-10 h-10 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-600">
+            <i data-lucide="sparkle" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 font-heading text-lg" data-i18n="skill_group_soft">Habilidades Personales</h3>
+          <ul class="space-y-2 text-sm text-slate-600">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i><span data-i18n="skill_empathy">Empatía y Escucha Activa</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i><span data-i18n="skill_leadership">Liderazgo de Grupos</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i><span data-i18n="skill_planning">Planificación Pedagógica</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i><span data-i18n="skill_communication">Comunicación con Familias</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INSPIRATIONAL QUOTE -->
+    <section class="text-center py-4">
+      <div class="glass-card max-w-4xl mx-auto p-10 sm:p-12 rounded-3xl bg-gradient-to-tr from-indigo-50/70 via-rose-50/50 to-amber-50/60 border border-slate-200/60 shadow-lg relative">
+        <i data-lucide="quote" class="w-12 h-12 text-indigo-300 mx-auto mb-4 opacity-50"></i>
+        <blockquote class="text-xl sm:text-2xl font-medium text-slate-800 italic font-heading leading-relaxed" data-i18n="quote_text">
+          «La educación no es llenar un cubo, sino encender un fuego. Enseñar un idioma es abrir una ventana al mundo desde la empatía y la confianza.»
+        </blockquote>
+        <p class="mt-4 font-bold text-indigo-600 text-sm tracking-wide uppercase" data-i18n="quote_author">Patricia Quiñones García</p>
+      </div>
+    </section>
+
+    <!-- CONTACTO / CONTACT -->
+    <section id="contacto" class="scroll-mt-28 space-y-10 no-print">
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100/70 text-indigo-700 text-xs font-bold tracking-wider uppercase">
+          <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+          <span data-i18n="contact_badge">¿Hablamos?</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 font-heading" data-i18n="contact_title">
+          Ponte en contacto
+        </h2>
+        <p class="text-slate-600 text-base" data-i18n="contact_subtitle">
+          Disponible para oportunidades docentes en academias, colegios bilingües, coordinación de proyectos formativos y colaboraciones socioeducativas.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Email Card -->
+        <div class="glass-card p-8 rounded-3xl text-center space-y-4 flex flex-col justify-between">
+          <div class="w-14 h-14 rounded-2xl bg-indigo-100 flex items-center justify-center text-indigo-600 mx-auto">
+            <i data-lucide="mail" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900 font-heading text-lg" data-i18n="contact_email_title">Correo Electrónico</h3>
+            <p class="text-sm text-slate-600 mt-1 select-all font-mono">patricia.pqg@gmail.com</p>
+          </div>
+          <div class="flex flex-col gap-2 pt-2">
+            <a href="mailto:patricia.pqg@gmail.com" class="w-full py-2.5 px-4 rounded-xl bg-indigo-600 text-white text-xs font-semibold hover:bg-indigo-700 transition-colors shadow-sm">
+              Enviar Email
+            </a>
+            <button onclick="copyToClipboard('patricia.pqg@gmail.com')" class="w-full py-2 px-4 rounded-xl bg-slate-100 text-slate-700 text-xs font-semibold hover:bg-slate-200 transition-colors">
+              <span data-i18n="contact_email_btn">Copiar Email</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Phone / WhatsApp Card -->
+        <div class="glass-card p-8 rounded-3xl text-center space-y-4 flex flex-col justify-between">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-600 mx-auto">
+            <i data-lucide="phone-call" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900 font-heading text-lg" data-i18n="contact_phone_title">Teléfono / WhatsApp</h3>
+            <p class="text-sm text-slate-600 mt-1 font-mono">+34 634 93 30 12</p>
+          </div>
+          <div class="flex flex-col gap-2 pt-2">
+            <a href="https://wa.me/34634933012" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-emerald-600 text-white text-xs font-semibold hover:bg-emerald-700 transition-colors shadow-sm flex items-center justify-center gap-1.5">
+              <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+              <span data-i18n="contact_phone_btn">Abrir WhatsApp</span>
+            </a>
+            <a href="tel:+34634933012" class="w-full py-2 px-4 rounded-xl bg-slate-100 text-slate-700 text-xs font-semibold hover:bg-slate-200 transition-colors">
+              Llamar por Teléfono
+            </a>
+          </div>
+        </div>
+
+        <!-- LinkedIn Card -->
+        <div class="glass-card p-8 rounded-3xl text-center space-y-4 flex flex-col justify-between">
+          <div class="w-14 h-14 rounded-2xl bg-sky-100 flex items-center justify-center text-sky-600 mx-auto">
+            <i data-lucide="linkedin" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900 font-heading text-lg" data-i18n="contact_linkedin_title">Perfil Profesional</h3>
+            <p class="text-sm text-slate-600 mt-1">LinkedIn Network</p>
+          </div>
+          <div class="pt-2">
+            <a href="https://www.linkedin.com/in/patricia-quinones-garcia" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-sky-600 text-white text-xs font-semibold hover:bg-sky-700 transition-colors shadow-sm flex items-center justify-center gap-1.5">
+              <span data-i18n="contact_linkedin_btn">Ver en LinkedIn</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200/60 bg-white/70 py-10 text-center text-sm text-slate-500 no-print">
+    <div class="max-w-6xl mx-auto px-4 space-y-3">
+      <div class="flex justify-center items-center gap-4">
+        <a href="https://www.linkedin.com/in/patricia-quinones-garcia" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-sky-600 transition-colors">
+          <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+        <a href="mailto:patricia.pqg@gmail.com" class="text-slate-400 hover:text-rose-500 transition-colors">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+        </a>
+      </div>
+      <p>© 2026 Patricia Quiñones García. <span data-i18n="footer_rights">Todos los derechos reservados.</span></p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Alert -->
+  <div id="toast" class="bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 border border-slate-700 text-sm font-medium">
+    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+    <span id="toast-text">¡Copiado con éxito!</span>
+  </div>
+
+  <!-- Lucide Icons Rendering & Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+    
+    // Re-render icons on DOM changes if needed
+    window.addEventListener('load', () => {
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
